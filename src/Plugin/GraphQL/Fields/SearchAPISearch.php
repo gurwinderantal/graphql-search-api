@@ -348,6 +348,9 @@ class SearchAPISearch extends FieldPluginBase implements ContainerFactoryPluginI
       // Set the relevance score.
       $document['relevance'] = $item->getScore();
 
+      // Add excerpt to the response array.
+      $document['excerpt'] = $item->getExcerpt();
+
       $search_response['SearchAPIDocument'][] = $document;
     }
 
